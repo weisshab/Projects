@@ -1,0 +1,723 @@
+/*  
+Aufgabe: Portfolio Website
+Name: Bastian Weisshaar
+Matrikel: 256578
+Datum: 26.06.2017
+Hiermit versichere ich, dass ich diesen
+Code selbst geschrieben habe. Er wurde
+nicht kopiert und auch nicht diktiert.
+*/
+
+html{
+	width:100%;
+}
+
+header{
+	width:100%;
+}
+
+main div{
+	background-color:white;
+}
+
+main{
+	width:100%;
+}
+
+li:hover{
+	cursor:pointer;
+}
+
+footer{
+	position:relative;
+	top:5.5em;
+	left:0;
+	
+	text-align:center;
+	
+	float:left;
+	width:100%;
+	
+	background-color:#ccc;
+	
+	border-top:1px solid black;
+}
+
+#Icons{
+	width:50%;
+	margin-left:25%;
+	margin-right:25%;
+}
+/*Smartphone Ansicht*/
+@media screen and (min-width: 0px){
+	.headerMain{
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height:4em;
+		background-color:#fff;
+		
+		font-family: 'Satisfy', cursive;
+
+		border-bottom:1px solid black;
+		
+		z-index:100;
+	}
+	
+	h1{
+		position:relative;
+		top:-0.3em;
+		right:80%;
+		left:10%;
+	}
+	
+	h2{
+		font-family: 'Francois One', sans-serif;
+		text-align:center;
+	}
+	
+	h3{
+		font-family: 'Francois One', sans-serif;
+		text-align:center;
+	}
+	
+	.headerMain img {
+		position:absolute;
+		width:2.5em;
+		
+		left:80%;
+		top:0.7em;
+		
+		
+	}
+	
+	#headerNav{
+		position:fixed;
+		top:2.7em;
+		width:100%;
+		
+		background-color:white;
+		
+		text-align:right;
+	
+		font-family: 'Francois One', sans-serif;
+		font-size:1.5em;
+		
+		z-index:100;
+	}
+	
+	#headerNav li{
+		list-style: none;
+		padding-top:1em;
+		padding-right:2em;
+
+		border-bottom:1px solid #000;
+	}
+	
+	a:link, a:visited{
+		text-decoration: none;
+		color:black;
+	}
+	
+	main{
+		position:relative;
+		top:5em;
+	}
+	
+	#uberMich{
+		width:100%;
+		text-align:center;
+		
+		font-family:'Francois One', sans-serif;
+	}
+	
+	.mainBild{
+		position:relative;
+		width:100%;
+		
+		
+	}
+	
+	.mainBild img{
+		width:70%;
+		margin-left:15%;
+		margin-right:15%;
+		
+		border-radius:20%;
+	}
+	
+	
+	#timeline{
+		width:100%;
+		padding-top:2em;
+	}
+	
+	#timeline img{
+		width:70%;
+		margin-left:15%;
+		margin-right:15%;
+	}
+	
+	#timeLi0{
+		display:none;
+	}
+	
+	.projects{
+		width:100%;
+	}
+	
+	.projects img{
+		width:70%;
+		margin-left:14%;
+		margin-right:14%;
+		border:1px solid black;
+	}
+	
+	footer div{
+		float:left;
+		width:31%;
+		margin:1%;
+		margin-top:1em;
+	}
+	
+	
+	footer img{
+		psoition:relative;
+		width:60%;
+		margin-left:20%;
+		margin-right:20%;
+	}
+	
+	#hfuLogo {
+		float:left;
+		width:100%;
+	}
+	
+	#hfuLogo img{
+		width:60%;
+		margin-left:20%;
+		margin-right:20%;
+		margin-top:1.5em;
+		margin-bottom:1em;
+	}
+	
+	footer span{
+		display:block;
+		font-family:'Francois One', sans-serif;
+		padding-bottom:1em;
+	}
+}
+
+
+
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+
+/*Tablet Ansicht Hochformat*/
+@media screen and (min-width: 576px){
+	.headerMain{
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height:4em;
+		background-color:#fff;
+		
+		font-family: 'Satisfy', cursive;
+
+		border-bottom:1px solid black;
+		
+		z-index:100;
+	}
+	
+	h1{
+		position:relative;
+		top:-0.3em;
+		right:80%;
+		left:10%;
+	}
+	
+	h2{
+		font-family: 'Francois One', sans-serif;
+		text-align:center;
+	}
+	
+	h3{
+		font-family: 'Francois One', sans-serif;
+		text-align:center;
+	}
+	
+	.headerMain img {
+		position:absolute;
+		width:2.5em;
+		
+		left:90%;
+		top:0.7em;
+	}
+	
+	#headerNav{
+		position:fixed;
+		
+		width:100%;
+		
+		background-color:white;
+		
+		text-align:right;
+	
+		font-family: 'Francois One', sans-serif;
+		font-size:1.5em;
+		
+		z-index:100;
+	}
+	
+	#headerNav li{
+		list-style: none;
+		padding-top:1em;
+		padding-right:2em;
+
+		border-bottom:1px solid #000;
+	}
+	
+	a:link, a:visited{
+		text-decoration: none;
+		color:black;
+	}
+	
+	main{
+		position:relative;
+		top:5em;
+	}
+	
+	#uberMich{
+		width:100%;
+		text-align:center;
+		
+		font-family:'Francois One', sans-serif;
+	}
+	
+	.mainBild{
+		position:relative;
+		width:100%;
+		
+		
+	}
+	
+	.mainBild img{
+		width:50%;
+		margin-left:25%;
+		margin-right:25%;
+		
+		border-radius:20%;
+	}
+	
+	
+	#timeline{
+		width:100%;
+		padding-top:2em;
+	}
+	
+	#timeline img{
+		width:50%;
+		margin-left:25%;
+		margin-right:25%;
+	}
+	
+	#timeLi0{
+		display:none;
+	}
+	
+	#timeLi1{
+		display:inline;
+	}
+	
+	.projects{
+		float:left;
+		width:48%;
+		margin:1%;
+	}
+	
+	.projects img{
+		width:70%;
+		margin-left:14%;
+		margin-right:14%;
+		border:1px solid black;
+	}
+	
+	footer div{
+		float:left;
+		width:31%;
+		margin:1%;
+		margin-top:1em;
+	}
+	
+	
+	footer img{
+		psoition:relative;
+		width:40%;
+		margin-left:30%;
+		margin-right:30%;
+	}
+	
+	#hfuLogo {
+		float:left;
+		width:70%;
+		margin-left:15%;
+		margin-right:15%;
+	}
+	
+	#hfuLogo img{
+		width:60%;
+		margin-left:20%;
+		margin-right:20%;
+		margin-top:1.5em;
+		margin-bottom:1em;
+	}
+	
+	footer span{
+		display:block;
+		font-family:'Francois One', sans-serif;
+		padding-bottom:1em;
+	}
+}
+
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+
+//Tablet Landscape
+@media screen and (min-width: 768px){
+	.headerMain{
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height:4em;
+		background-color:#fff;
+		
+		font-family: 'Satisfy', cursive;
+
+		border-bottom:1px solid black;
+		
+		z-index:100;
+	}
+	
+	h1{
+		position:relative;
+		top:-0.3em;
+		right:80%;
+		left:10%;
+	}
+	
+	h2{
+		font-family: 'Francois One', sans-serif;
+		text-align:center;
+	}
+	
+	h3{
+		font-family: 'Francois One', sans-serif;
+		text-align:center;
+	}
+	
+	.headerMain img {
+		position:absolute;
+		width:2.5em;
+		
+		left:90%;
+		top:0.7em;
+	}
+	
+	#headerNav{
+		position:fixed;
+		top:2.7em;
+		width:100%;
+		
+		background-color:white;
+		
+		text-align:right;
+	
+		font-family: 'Francois One', sans-serif;
+		font-size:1.5em;
+		
+		z-index:100;
+	}
+	
+	#headerNav li{
+		list-style: none;
+		padding-top:1em;
+		padding-right:2em;
+
+		border-bottom:1px solid #000;
+	}
+	
+	a:link, a:visited{
+		text-decoration: none;
+		color:black;
+	}
+	
+	main{
+		position:relative;
+		top:5em;
+	}
+	
+	#uberMich{
+		width:100%;
+		text-align:center;
+		
+		font-family:'Francois One', sans-serif;
+	}
+	
+	.mainBild{
+		position:relative;
+		width:100%;
+		
+		
+	}
+	
+	.mainBild img{
+		width:50%;
+		margin-left:25%;
+		margin-right:25%;
+		
+		border-radius:20%;
+	}
+	
+	
+	#timeline{
+		width:100%;
+		padding-top:2em;
+	}
+	
+	#timeline img{
+		width:70%;
+		margin-left:15%;
+		margin-right:15%;
+	}
+	
+	#timeLi0{
+		display:inline;
+	}
+	
+	#timeLi1{
+		display:none;
+	}
+	
+	.projects{
+		float:left;
+		width:31%;
+		margin:1%;
+	}
+	
+	.projects img{
+		width:70%;
+		margin-left:14%;
+		margin-right:14%;
+		border:1px solid black;
+	}
+	
+	footer div{
+		float:left;
+		width:31%;
+		margin:1%;
+		margin-top:1em;
+	}
+	
+	
+	footer img{
+		psoition:relative;
+		width:30%;
+		margin-left:35%;
+		margin-right:35%;
+	}
+	
+	#hfuLogo {
+		float:left;
+		width:70%;
+		margin-left:15%;
+		margin-right:15%;
+	}
+	
+	#hfuLogo img{
+		width:60%;
+		margin-left:20%;
+		margin-right:20%;
+		margin-top:1.5em;
+		margin-bottom:1em;
+	}
+	
+	footer span{
+		display:block;
+		font-family:'Francois One', sans-serif;
+		padding-bottom:1em;
+	}
+}
+
+
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+
+
+/*Desktopansicht*/
+@media screen and (min-width: 1024px){
+
+	.headerMain{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:5em;
+		background-color:#fff;
+
+		border-bottom:1px solid black;
+		
+		z-index:100;
+	}
+	
+	h1{
+		position:relative;
+		top:-0.5em;
+		
+		font-family: 'Satisfy', cursive;
+		font-size:3em;
+		
+		left:10%;
+	}
+	
+	h2{
+		font-family: 'Francois One', sans-serif;
+		text-align:center;
+	}
+	
+	h3{
+		font-family: 'Francois One', sans-serif;
+		text-align:center;
+	}
+	
+	#headerNav{
+		position:absolute;
+		
+		top:0;
+		width:100%;
+		
+		background-color:transparent;
+		
+		text-align:right;
+	
+		font-family: 'Francois One', sans-serif;
+		font-size:1.5em;
+		
+		z-index:100;
+	}
+	
+	#headerNav li{
+		display:inline;
+		list-style: none;
+		padding-top:1em;
+		padding-right:2em;
+
+		border-bottom:1px solid #000;
+	}
+	
+	a:link, a:visited{
+		text-decoration: none;
+		color:black;
+	}
+	
+	main{
+		position:relative;
+		top:5em;
+	}
+	
+	#uberMich{
+		width:100%;
+		text-align:center;
+		
+		font-family:'Francois One', sans-serif;
+	}
+	
+	.mainBild{
+		position:relative;
+		width:60%;
+		margin-right:20%;
+		margin-left:20%;
+		
+	}
+	
+	.mainBild img{
+		width:50%;
+		margin-left:25%;
+		margin-right:25%;
+		
+		border-radius:20%;
+	}
+	
+	
+	#timeline{
+		width:100%;
+		padding-top:2em;
+	}
+	
+	#timeline img{
+		width:70%;
+		margin-left:15%;
+		margin-right:15;
+	}
+	
+	#timeLi0{
+		display:inline;
+	}
+	
+	#timeLi1{
+		display:none;
+	}
+	
+	.projects{
+		float:left;
+		width:48%;
+		margin:1%;
+	}
+	
+	.projects img{
+		width:70%;
+		margin-left:14%;
+		margin-right:14%;
+		border:1px solid black;
+	}
+	
+	footer div{
+		float:left;
+		width:23%;
+		margin:1%;
+		margin-top:1em;
+	}
+	
+	
+	footer img{
+		psoition:relative;
+		width:20%;
+		margin-left:35%;
+		margin-right:35%;
+	}
+	
+	#hfuLogo {
+		float:left;
+		width:23%;
+		margin:1%;
+	}
+	
+	#hfuLogo img{
+		width:60%;
+		margin-left:20%;
+		margin-right:20%;
+	}
+	
+	footer span{
+		float:left;
+		width:100%;
+		font-family:'Francois One', sans-serif;
+		padding-bottom:1em;
+	} 
+
+}

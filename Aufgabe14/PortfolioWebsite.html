@@ -1,0 +1,141 @@
+<!--  
+Aufgabe: Portfolio Website
+Name: Bastian Weisshaar
+Matrikel: 256578
+Datum: 26.06.2017
+Hiermit versichere ich, dass ich diesen
+Code selbst geschrieben habe. Er wurde
+nicht kopiert und auch nicht diktiert.
+-->
+
+
+<!DOCTYPE html>
+
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Portfolio, HFU, EIA1, Bastian Weisshaar"> 	<!-- Keywords -->
+  		<meta name="author" content="Bastian Weisshaar">		<!-- Ersteller -->
+  		<meta name="date" content="2016-06-26">					<!-- Erstellungsdatum -->
+  		<link rel="icon" href="#">   			<!-- Logo im Tab -->
+		<title>Bastian Weisshaar Portfolio</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/PortfolioWebsite.css">
+		<script src="js/PortfolioWebsite.js"></script>
+		
+		<!-- viewport wird auf die Device-Breite initialisiert -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Schriftart eingebunden -->
+		<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+	</head>
+	
+	<body>
+		<header>
+			
+			<!-- Just Look Überschrift und Menübutton -->
+			<div class="headerMain">
+				<h1>Just Look</h1>
+				<img src="img/menuButton.png" id="menuButton" alt="Menu Button">
+				<img src="img/closeButton.png" id="closeButton" alt="close Button">
+			</div>
+			
+			<!-- Navigationsbereich im Header -->
+			<div id="headerNav">
+				<ul>
+					<li id="uberMichLi">Über Mich</li>
+					<li id="timelineLi">Timeline</li>
+					<li id="projectsLi">Projects</li>
+					<li id="kontaktLi"><a href="#kontakt">Kontakt</a></li>
+				</ul>
+			</div>
+			
+		</header>
+		
+		<main>
+		
+			
+			<!-- Bild und paar Sätze über mich -->
+			<div id="uberMich">
+				<h2>Über mich</h2>
+				<div class="mainBild">
+					<img src="img/DSC_0212.png" alt="Titelbild"> <!-- Professionelles Foto folgt :-) -->
+				</div>
+				
+				<p>Mein Name ist Bastian Weisshaar.</p>
+				<p>Ich Studiere Digitale Medien in Fachrichtung Medienkonzeption an der Hochschule Furtwangen.</p>
+				<p>Derzeit wohne ich in Schonach im Schwarzwald.</p>
+			</div>
+			
+			
+			<!-- Lebenslauf grob mit voraussichtlich Abschluss -->
+			<div id="timelineDiv"> <!-- Timeline -->
+				<h2 id="headlineTimeline">Timeline</h2>
+				<div id="timeline">
+					<img id="timeLi0" src="img/Timeline.png" alt="Timeline">
+					<img id="timeLi1" src="img/Timeline1.png" alt="Timeline">
+				</div>
+			
+			<!-- Porjekte werden noch in Typeskript verarbeitet (Interface) -->
+			</div>
+				
+				<div id="projectsDiv"><!-- Projects -->
+					<h2 id="headlineProjects">Projects</h2>
+					
+					<div class="projects">
+						<h3>Onlineshop</h3>
+						<img src="img/2017-07-07.png" alt="Online Shop">
+					</div>
+					
+					<div class="projects">
+						<h3>Ausleuchtung einer Szene</h3>
+						<img src="img/SzeneBeleuchten.png" alt="Szene Beleuchten">
+					</div>
+					
+					<div class="projects">
+						<h3>Kapazitiv Füllstände messen</h3>
+						<img src="img/2017-02-03 (2).png" alt="Messung von Füllständen">
+					</div>
+					
+					<div class="projects">
+						<h3>Digitaler Kompass</h3>
+						<img src="img/Platine.png" alt="Digitaler Kompass">
+					</div>
+					
+					
+				
+				</div>	
+		</main>
+		
+		<!-- Footer mit Kontaktdaten -->
+		<footer id="kontakt">
+			<h2>Kontakt</h2>
+			<div id="Icons">
+				<div>
+					<a href="https://www.instagram.com/basti_396/"><img src="img/Instagram.png" alt="Instagram"></a>
+				</div>
+				
+				<div>
+					<a href="https://www.facebook.com/bastian.weisshaar"><img src="img/facebook.png" alt="Facebook"></a>
+				</div>
+				
+				<div>
+					<a href="mailto:Bastian.Weisshaar@hs-furtwangen.de"><img src="img/mail.png" alt="eMail"></a> 
+				</div>
+				
+				<div id="hfuLogo">
+					<a href="http://www.hs-furtwangen.de/"><img src="img/hfu-logo.png" alt="HFU Logo"></a>
+				</div>
+			</div>
+			<span>Bastian Weisshaar</span>
+			<span>Sommerbergstr. 26</span>
+			<span>78136 Schonach</span>
+			
+			<h3> Impressum</h3>
+			<span>© Bastian Weisshaar</span>		
+		</footer>
+	</body>
+
+</html>
