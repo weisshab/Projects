@@ -1,0 +1,1414 @@
+/* 
+Aufgabe: Aufgabe-7-Shop
+Name: Bastian Weisshaar
+Matrikel: 256578
+Datum: 04.05.2017
+Hiermit versichere ich, dass ich diesen
+Code selbst geschrieben habe. Er wurde
+nicht kopiert und auch nicht diktiert.
+*/
+
+
+
+/*Allgemeine Angaben*/
+html{
+	width:100%;
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+header{
+	float:left;
+	background-color:#004080;
+	width:100%;
+	
+	position:fixed;
+	left:0;
+	top:0;
+	
+	z-index:2;
+}
+
+
+header span:hover{
+	border-bottom:1px solid #fff;
+
+}
+
+main{
+	width:100%;
+	float:left;
+}
+
+h1{
+	color:white;
+	font-family: 'Anton', sans-serif;
+}
+
+h1 a:link{
+	color:white;
+}
+
+h1 a:visited{
+	color:white;
+}
+
+a{
+	text-decoration:none;
+}
+
+li{
+	list-style-type:none;
+}
+
+.button:hover{
+	background-color:#0080ff;
+}
+
+.button2:hover{
+	background-color:#808080;
+}
+
+/*******************************************************************************/
+/*******************************************************************************/
+
+
+/*Smartphone-Ansicht*/
+@media screen and (max-width: 36em){
+	
+	
+
+	
+	header{
+		margin-left:0;
+		height:10em;	
+	}
+	
+	/*Wahrenkorb + Navigation*/
+	header div{
+		color:white;
+		font-family: 'Anton', sans-serif;
+		
+		text-align:center;
+		position:relative;
+		top:-0.3em;
+		
+		cursor:pointer;
+	}
+	
+	/*Erzeugt Unterstreichung bei Hover*/
+	header span:hover{
+		border-bottom:none;
+	}	
+	
+	
+	#Dropdown{
+		background-color:#ffffff;
+		color:black;
+	}
+	
+	/*Trickz.nfl*/
+	h1{
+		position:relative;
+		text-align:center;
+		left:5%;
+		
+		font-size:2em;	
+	}
+	
+	/*n-Artikel im Wahrenkorb & Gesamtpreis ausblenden*/
+	.Wahrenkorb2, .Wahrenkorb3{
+		display:none;
+	}
+	
+	/*Wahrenkorb-Icon*/
+	#Wahrenkorb{
+		position:absolute;
+		
+		left:1.7em;
+		top:0.3em;
+		width:2.5em;
+		
+		background-color:#fff;
+		border-radius:20%;
+		padding:5px;
+		
+		z-index:10;
+	}
+	
+	/*Anzahl der Artikel im Wahrenkorb*/
+	#badge{
+		position:absolute;
+		left:5em;
+		top:-1.5em;
+		width:0.6em;
+		
+		font-size:0.8em;
+		border-radius:40%;
+		background-color:#f00;
+		
+		padding-left:7px;
+		padding-right:7px;
+		
+		z-index:11;
+	}
+	
+	#select{
+		width:100%;
+		height:2em;
+		font-size:1em;
+		background-color:#fff;
+		
+		font-family: 'Anton', sans-serif;
+		color:#000;
+	}
+	
+	
+
+	
+	
+
+	
+	/*Artikelbox*/
+		.Box-1{
+		position:relative;
+		top:9em;
+		
+		width:80%;
+		height:30em;
+		left:8%;
+		float:left;
+	
+		border:1px solid silver;
+		border-radius:1em;
+		
+		box-shadow:3px 3px 4px #8CA0B2;
+		
+		margin-top:2em;
+		
+		-webkit-transition: all 1s ease; 
+		transition: all 1s ease;
+	}
+	
+	.Box-1:hover{
+		box-shadow:4px 4px 5px #0000ff;
+	}
+	
+	.Box-1 img{
+		display:block;
+		position:relative;
+		top:0.5em;
+		width:15em;
+		height:15em;
+		
+		margin-left:auto;
+		margin-right:auto;
+	}
+		
+	.Box-1-1{
+		position:relative;
+		width:98%;
+		height:15em;
+		top:-0.05em;
+		left:-0.8em;
+		
+		
+		text-align:center;
+		font-family: 'Montserrat', sans-serif;
+		
+		background-color:transparent;
+		border-radius:1em;
+	}
+	
+	
+	.Box-1-1 li{
+		position:relative;
+		padding-bottom:0.5em;
+	}
+		
+	/* Name in Artikelbox*/
+	.Box-1-1 > ul > li:first-child{
+		position:relative;
+		font-size:1.5em;
+	}
+	
+	/*Gestaltung des "Jetzt Kaufen" Buttons*/
+	.button{
+	
+		width:100%;
+		position:relative;
+		top:0.5em;
+		
+		
+		display:inline-block;
+		text-decoration:none;
+		font-family:Arial;
+		font-size:1.3em;
+		border:1px solid #fff;
+		color:white;
+		background-color:#A8BCD0;
+		padding:5px 15px;
+		font-weight:bold;
+		box-shadow:3px 3px 4px #8CA0B2;
+		text-shadow:1px 1px 2px #6E91B2;
+		
+		cursor:pointer;
+		
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	
+	
+	/*Gestaltung des "Mehr Infos" Buttons*/
+	.button2{
+	
+		width:99%;
+		height:1em;
+		position:relative;
+		
+		
+		
+		display:inline-block;
+		text-decoration:none;
+		font-family:Arial;
+		font-size:1em;
+		border:1px solid #fff;
+		color:white;
+		background-color:#c0c0c0;
+		padding-top:6px;
+		margin-top:1em;
+		font-weight:bold;
+		box-shadow:3px 3px 4px #8CA0B2;
+		text-shadow:1px 1px 2px #6E91B2;
+		
+		cursor:pointer;
+		
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	
+
+	
+	.rabatt{
+		position:absolute;
+		top:-105%;
+		left:85%;
+		height:1.5em;
+		width:2em;
+		
+		padding:0.5em;
+		padding-top:0.9em;
+		padding-right:0.9em;
+		
+		background-color:red;
+		font-family: 'Montserrat', sans-serif;
+		color:white;
+		
+		border:1px solid red;
+		border-radius:100%;
+	}
+	
+	.fastweg{
+		position:absolute;
+		top:-105%;
+		left:80%;
+		width:5.4em;
+		height:3.9em;
+		
+		
+		padding:0.5em;
+		padding-top:2em;
+		background-color:red;
+		font-family: 'Montserrat', sans-serif;
+		font-size:0.7em;
+		color:white;
+		
+		border:1px solid red;
+		border-radius:100%;
+	}
+	
+	
+	
+	/*Fussbereich - Einspaltig*/
+	footer{
+		float:left;
+		position:relative;
+		background-color:#000000;
+		width:100%;
+		
+		top:10em;
+		z-index:1;
+		
+		border-top:2px solid red;
+		left:0;
+	}
+	
+	footer div{
+		float:left;
+		width:100%;
+	}
+	
+	
+	.footer-li{
+		margin-top: 1em;
+	}
+	
+	.footer-li a:visited{
+		color:white;
+		font-family: 'Montserrat', sans-serif;
+		font-size:0.8em;
+	}
+	
+	.footer-li a:link{
+		color:white;
+		font-family: 'Montserrat', sans-serif;
+		font-size:0.8em;
+	}
+	
+	h3{
+		position:relative;
+		left:2em;
+	
+		font-family: 'Montserrat', sans-serif;
+		color:white;
+		padding-top:0.5em;
+	}
+	
+
+}
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+
+/*Tablet-Portrait*/
+
+@media screen and (min-width: 36em)  {
+	
+	header{
+		margin-left:0;
+		height:8em;
+	}
+	
+	
+	/*Wahrenkorb + Navigation*/
+	header div {
+		color:white;
+		font-family: 'Anton', sans-serif;
+		
+		text-align:center;
+		display:inline;
+		position:relative;
+		top:-0.4em;
+		left:7.2em;
+		
+		cursor:pointer;
+		
+		padding-right:1em;
+	}
+	
+	/*Trickz.NFL*/
+	h1{
+		position:Relative;
+		left:6.8em;
+		
+		font-size:2.2em;
+	}
+	
+	#div-wahrenkorb{
+		position:absolute;
+	}
+	
+	/*n-Artikel im Wahrenkorb & Preis ausblenden*/
+	.Wahrenkorb2, .Wahrenkorb3{
+		display:none;
+	}
+	
+	/*Wahrenkorb-Icon*/
+	#Wahrenkorb{
+		position:absolute;
+		
+		left:-5em;
+		top:2.3em;
+		width:4em;
+		
+		background-color:#fff;
+		border-radius:20%;
+		padding:5px;
+		
+		z-index:10;
+	}
+	
+	/*Anzahl Produkte im Wahrenkorb*/
+	#badge{
+		position:absolute;
+		left:-2em;
+		top:1.2em;
+		width:0.8em;
+		height:1.8em;
+		
+		font-size:0.8em;
+		border-radius:40%;
+		background-color:#f00;
+		
+		padding-left:7px;
+		padding-right:7px;
+		
+		z-index:11;
+	}
+	
+	#select{
+		width:6em;
+		height:2em;
+		font-size:1em;
+		background-color:#004080;
+		
+		
+		font-family: 'Anton', sans-serif;
+		color:#fff;
+	}
+	
+	
+	
+
+	
+	
+	
+	/*Artikelbox*/
+	.Box-1{
+		position:relative;
+		top:9em;
+		
+		width:46%;
+		height:30em;
+		left:0.5em;
+		float:left;
+	
+		border:1px solid silver;
+		border-radius:1em;
+		
+		box-shadow:3px 3px 4px #8CA0B2;
+		
+		padding:0.5%;
+		margin: 1%;
+		margin-top:2em;
+		
+		-webkit-transition: all 0.5s ease; 
+		transition: all 0.5s ease;
+	}
+	
+	.Box-1:hover{
+		box-shadow:4px 4px 5px #0000ff;
+	}
+
+	.Box-1 img{
+		display:block;
+		position:relative;
+		top:0.5em;
+		width:15em;
+		height:15em;
+		
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+	.Box-1-1{
+		position:relative;
+		width:98%;
+		height:15em;
+		top:-0.05em;
+		left:-0.8em;
+		
+		
+		text-align:center;
+		font-family: 'Montserrat', sans-serif;
+		
+		background-color:transparent;
+		border-radius:1em;
+	}
+	
+	.Box-1-1 li{
+		position:relative;
+		padding-bottom:0.5em;
+	}
+	
+	/* Name in Artikelbox*/
+	.Box-1-1 > ul > li:first-child{
+		position:relative;
+		font-size:1.5em;
+	}
+
+	/*Gestaltung des "Jetzt Kaufen" Buttons*/
+	
+	.button{
+	
+		width:100%;
+		position:relative;
+		top:0.5em;
+		
+		
+		display:inline-block;
+		text-decoration:none;
+		font-family:Arial;
+		font-size:1.3em;
+		border:1px solid #fff;
+		color:white;
+		background-color:#A8BCD0;
+		padding:5px 15px;
+		font-weight:bold;
+		box-shadow:3px 3px 4px #8CA0B2;
+		text-shadow:1px 1px 2px #6E91B2;
+		
+		cursor:pointer;
+		
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	
+	/*Gestaltung des "Mehr Infos" Buttons*/
+	.button2{
+	
+		width:99%;
+		height:1em;
+		position:relative;
+		
+		
+		
+		display:inline-block;
+		text-decoration:none;
+		font-family:Arial;
+		font-size:1em;
+		border:1px solid #fff;
+		color:white;
+		background-color:#c0c0c0;
+		padding-top:6px;
+		margin-top:1em;
+		font-weight:bold;
+		box-shadow:3px 3px 4px #8CA0B2;
+		text-shadow:1px 1px 2px #6E91B2;
+		
+		cursor:pointer;
+		
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	
+
+	
+	.rabatt{
+		position:absolute;
+		top:-100%;
+		left:80%;
+		height:1.5em;
+		width:2em;
+		
+		padding:0.5em;
+		padding-top:0.9em;
+		padding-right:0.9em;
+		
+		background-color:red;
+		font-family: 'Montserrat', sans-serif;
+		color:white;
+		
+		border:1px solid red;
+		border-radius:100%;
+	}
+	
+	.fastweg{
+		position:absolute;
+		top:-100%;
+		left:75%;
+		width:5.4em;
+		height:3.9em;
+		
+		
+		padding:0.5em;
+		padding-top:2em;
+		background-color:red;
+		font-family: 'Montserrat', sans-serif;
+		font-size:0.7em;
+		color:white;
+		
+		border:1px solid red;
+		border-radius:100%;
+	}
+	
+	
+	
+	/*Fussbereich - Zweispaltig*/
+	footer{
+		float:left;
+		position:relative;
+		background-color:#000000;
+		width:100%;
+		
+		top:10em;
+		z-index:1;
+		
+		border-top:2px solid red;
+		margin-left:0;
+	}
+	
+	footer div{
+		float:left;
+		width:50%;
+	}
+	
+	
+	.footer-li{
+		margin-top: 1em;
+	}
+
+	.footer-li a:visited{
+		color:white;
+		font-family: 'Montserrat', sans-serif;
+		font-size:0.8em;
+	}
+
+	.footer-li a:link{
+		color:white;
+		font-family: 'Montserrat', sans-serif;
+		font-size:0.8em;
+	}
+	
+	h3{
+		position:relative;
+		left:2em;
+	
+		font-family: 'Montserrat', sans-serif;
+		color:white;
+		padding-top:0.5em;
+	}
+	
+}
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+
+/*Tablet-Landscape*/
+@media screen and (min-width: 48em)  {
+	
+	header{
+		margin-left:0;
+		height:8em;
+	}
+	
+	
+	header div{
+		color:white;
+		font-family: 'Anton', sans-serif;
+		font-size:1.2em;
+		
+		text-align:center;
+		display:inline;
+		position:relative;
+		left:8em;
+		top:2em;
+		
+		cursor:pointer;
+		
+		padding-right:1em;
+	}
+
+	
+	h1{
+		position:absolute;
+		top:-0.5em;
+		left:7em;
+		
+		font-size:3em;
+	}
+	
+	
+	#div-wahrenkorb{
+		position:absolute;
+	}
+	
+	#Wahrenkorb{
+		display:none;
+	}
+	
+	.Wahrenkorb2{
+		display:block;
+		position:absolute;
+		
+		left:-7em;
+		top:-1.6em;
+		width:10em;
+		
+		background-color:#fff;
+		
+		padding:2px;
+		color:#f00;
+		
+		z-index:10;
+	}
+	
+	.Wahrenkorb3{
+		display:block;
+		position:absolute;
+		
+		left:-7em;
+		top:1em;
+		width:10em;
+		
+		background-color:#fff;
+		
+		padding:2px;
+		color:#f00;
+		
+		z-index:10;
+	}
+	
+	#badge{
+		display:none;
+	}
+	
+	#select{
+		height:1.5em;
+		font-size:1em;
+	}
+
+	
+	
+
+	
+	
+	/*Artikelbox*/
+	.Box-1{
+		position:relative;
+		top:9em;
+		
+		width:28%;
+		height:26em;
+		left:0.5em;
+		float:left;
+	
+		border:1px solid silver;
+		border-radius:1em;
+		
+		box-shadow:3px 3px 4px #8CA0B2;
+		
+		padding:0.5%;
+		margin: 2%;
+		margin-top:2em;
+		
+		-webkit-transition: all 1s ease; 
+		transition: all 1s ease;
+	}
+	
+	.Box-1:hover{
+		box-shadow:4px 4px 5px #0000ff;
+	}
+	
+	
+
+	.Box-1 img{
+		display:block;
+		position:relative;
+		width:12em;
+		height:12em;
+		
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+	.Box-1-1{
+		position:relative;
+		width:98%;
+		height:15em;
+		top:-0.05em;
+		left:-0.8em;
+		
+		
+		text-align:center;
+		font-family: 'Montserrat', sans-serif;
+		
+		background-color:transparent;
+		border-radius:1em;
+	}
+	
+	.Box-1-1 li{
+		position:relative;
+		padding-bottom:0.5em;
+	}
+	
+	/* Name in Artikelbox*/
+	.Box-1-1 > ul > li:first-child{
+		position:relative;
+		font-size:1.5em;
+	}
+
+	/*Gestaltung des "Jetzt Kaufen" Buttons*/
+	.button{
+	
+		width:100%;
+		position:relative;
+		top:0.5em;
+		
+		
+		display:inline-block;
+		text-decoration:none;
+		font-family:Arial;
+		font-size:1.3em;
+		border:1px solid #fff;
+		color:white;
+		background-color:#A8BCD0;
+		padding:5px 15px;
+		font-weight:bold;
+		box-shadow:3px 3px 4px #8CA0B2;
+		text-shadow:1px 1px 2px #6E91B2;
+		
+		cursor:pointer;
+		
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	
+	.button2{
+	
+		width:99%;
+		height:1em;
+		position:relative;
+		
+		
+		
+		display:inline-block;
+		text-decoration:none;
+		font-family:Arial;
+		font-size:1em;
+		border:1px solid #fff;
+		color:white;
+		background-color:#c0c0c0;
+		padding-top:6px;
+		margin-top:1em;
+		font-weight:bold;
+		box-shadow:3px 3px 4px #8CA0B2;
+		text-shadow:1px 1px 2px #6E91B2;
+		
+		cursor:pointer;
+		
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	
+
+	
+	.rabatt{
+		position:absolute;
+		top:-80%;
+		left:80%;
+		height:1.5em;
+		width:2em;
+		
+		padding:0.5em;
+		padding-top:0.9em;
+		padding-right:0.9em;
+		
+		background-color:red;
+		font-family: 'Montserrat', sans-serif;
+		color:white;
+		
+		border:1px solid red;
+		border-radius:100%;
+	}
+	
+	.fastweg{
+		position:absolute;
+		top:-85%;
+		left:75%;
+		width:5.4em;
+		height:3.9em;
+		
+		
+		padding:0.5em;
+		padding-top:2em;
+		background-color:red;
+		font-family: 'Montserrat', sans-serif;
+		font-size:0.7em;
+		color:white;
+		
+		border:1px solid red;
+		border-radius:100%;
+	}
+	
+	
+	
+	/*Fussbereich - Vierspaltig*/
+	footer{
+		float:left;
+		position:relative;
+		background-color:#000000;
+		width:100%;
+		
+		top:10em;
+		z-index:1;
+		
+		border-top:2px solid red;
+		margin-left:0;
+	}
+	
+	footer div{
+		float:left;
+		width:25%;
+	}
+	
+	.footer-li{
+		margin-top: 1em;
+	}
+
+	.footer-li a:visited{
+		color:white;
+		font-family: 'Montserrat', sans-serif;
+		font-size:0.8em;
+	}
+
+	.footer-li a:link{
+		color:white;
+		font-family: 'Montserrat', sans-serif;
+		font-size:0.8em;
+	}
+	
+	h3{
+		position:relative;
+		left:2em;
+	
+		font-family: 'Montserrat', sans-serif;
+		color:white;
+		padding-top:0.5em;
+	}
+	
+}
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+
+
+/*Desktop Ansicht*/
+@media screen and (min-width: 64em)  {
+	
+	header{
+		margin-left:0;
+		height:8em;
+	}
+	
+	
+	header div{
+		color:white;
+		font-family: 'Anton', sans-serif;
+		font-size:1.3em;
+		
+		text-align:center;
+
+		position:relative;
+		top:0.9em;
+		left:15em;
+		
+		padding-right:2em;
+		
+		cursor:pointer;
+	}
+	
+
+	
+	h1{
+		width:100%;
+		font-size:4em;
+		
+		text-align:left;
+		position:absolute;
+		top:-0.4em;
+		left:5em;
+		
+		}
+	
+	#div-wahrenkorb{
+		position:absolute;
+	}
+	
+	#Wahrenkorb{
+		display:none;
+	}
+	
+	.Wahrenkorb2{
+		display:block;
+		position:absolute;
+		
+		left:-13em;
+		top:-0.9em;
+		width:10em;
+		
+		background-color:#fff;
+		
+		padding:2px;
+		color:#f00;
+		
+		z-index:10;
+	}
+	
+	.Wahrenkorb3{
+		display:block;
+		position:absolute;
+		
+		left:-13em;
+		top:1.4em;
+		width:10em;
+		
+		background-color:#fff;
+		
+		padding:2px;
+		color:#f00;
+		
+		z-index:10;
+	}
+
+	#select{
+		font-size:0.8em;
+
+	}
+
+	
+		
+
+	
+	
+	/*Artikelbox*/
+	.Box-1{
+		position:relative;
+		top:9em;
+		
+		width:19%;
+		height:26em;
+		left:0.5em;
+		float:left;
+	
+		border:1px solid silver;
+		border-radius:1em;
+		
+		box-shadow:3px 3px 4px #8CA0B2;
+		
+		padding:0.5%;
+		margin: 2%;
+		margin-top:2em;
+		
+		-webkit-transition: all 1s ease; 
+		transition: all 1s ease;
+	}
+	
+	.Box-1:hover{
+		box-shadow:4px 4px 5px #0000ff;
+	}
+
+	.Box-1 img{
+		display:block;
+		position:relative;
+		
+		width:12em;
+		height:12em;
+		
+	}
+	
+	.Box-1-1{
+		position:relative;
+		width:98%;
+		height:15em;
+		top:-0.05em;
+		left:-0.8em;
+		
+		
+		text-align:center;
+		font-family: 'Montserrat', sans-serif;
+		
+		background-color:transparent;
+		border-radius:1em;
+	}
+	
+	.Box-1-1 li{
+		position:relative;
+		padding-bottom:0.5em;
+	}
+	
+	/* Name in Artikelbox*/
+	.Box-1-1 > ul > li:first-child{
+		position:relative;
+		font-size:1.5em;
+	}
+
+	/*Gestaltung des "Jetzt Kaufen" Buttons*/
+	.button{
+	
+		width:100%;
+		position:relative;
+		top:0.5em;
+		
+		
+		display:inline-block;
+		text-decoration:none;
+		font-family:Arial;
+		font-size:1.1em;
+		border:1px solid #fff;
+		color:white;
+		background-color:#A8BCD0;
+		padding:5px 15px;
+		font-weight:bold;
+		box-shadow:3px 3px 4px #8CA0B2;
+		text-shadow:1px 1px 2px #6E91B2;
+		
+		cursor:pointer;
+		
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	
+	.button2{
+	
+		width:99%;
+		height:1em;
+		position:relative;
+		
+		
+		
+		display:inline-block;
+		text-decoration:none;
+		font-family:Arial;
+		font-size:0.9em;
+		border:1px solid #fff;
+		color:white;
+		background-color:#c0c0c0;
+		padding-top:6px;
+		margin-top:1em;
+		font-weight:bold;
+		box-shadow:3px 3px 4px #8CA0B2;
+		text-shadow:1px 1px 2px #6E91B2;
+		
+		cursor:pointer;
+		
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	
+	
+	
+	.rabatt{
+		position:absolute;
+		top:-85%;
+		left:85%;
+		height:1.5em;
+		width:2em;
+		
+		padding:0.5em;
+		padding-top:0.9em;
+		padding-right:0.9em;
+		
+		background-color:red;
+		font-family: 'Montserrat', sans-serif;
+		color:white;
+		
+		border:1px solid red;
+		border-radius:100%;
+	}
+	
+	.fastweg{
+		position:absolute;
+		top:-85%;
+		left:80%;
+		width:5.4em;
+		height:3.9em;
+		
+		
+		padding:0.5em;
+		padding-top:2em;
+		background-color:red;
+		font-family: 'Montserrat', sans-serif;
+		font-size:0.7em;
+		color:white;
+		
+		border:1px solid red;
+		border-radius:100%;
+	}
+	
+	
+	/*Fussbereich - Vierspaltig*/
+	footer{
+		float:left;
+		position:relative;
+		background-color:#000000;
+		width:100%;
+		
+		top:10em;
+		z-index:1;
+		
+		border-top:2px solid red;
+		margin-left:0;
+	}
+	
+	footer div{
+		float:left;
+		width:25%;
+	}
+	
+	.footer-li{
+		margin-top: 1em;
+	}
+
+	.footer-li a:visited{
+		color:white;
+		font-family: 'Montserrat', sans-serif;
+		font-size:0.8em;
+	}
+
+	.footer-li a:link{
+		color:white;
+		font-family: 'Montserrat', sans-serif;
+		font-size:0.8em;
+	}
+	
+	h3{
+		position:relative;
+		left:2em;
+	
+		font-family: 'Montserrat', sans-serif;
+		color:white;
+		padding-top:0.5em;
+	}
+	
+}
+
+
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+
+/*Print-Ansicht*/
+@media print {
+	
+	
+	body {
+		font-size: 10pt;
+	}
+	
+	/*Hier werden header und footer vom Layout genommen*/
+	header, footer {
+		display:none;
+	}
+
+
+
+	/*Artikelbox*/
+	.Box-1{
+	position:relative;
+	top:2em;
+	
+	width:28%;
+	height:20%;
+	left:0.5em;
+	float:left;
+
+	border:1px solid silver;
+	border-radius:1em;
+	
+	box-shadow:3px 3px 4px #8CA0B2;
+	
+	padding:0.5%;
+	margin: 2%;
+	margin-top:2em;
+}
+
+	.Box-1 img{
+		position:relative;
+		left:2em;
+		width:75%;
+	}
+	
+	.Box-1-1{
+		position:relative;
+		width:98%;
+		top:-0.05em;
+		left:-0.8em;
+		
+		
+		text-align:center;
+		font-family: 'Montserrat', sans-serif;
+		
+		background-color:transparent;
+		border-radius:1em;
+	}
+	
+	.Box-1-1 li{
+		position:relative;
+		padding-bottom:0.5em;
+	}
+	
+	/* Name in Artikelbox*/
+	.Box-1-1 > ul > li:first-child{
+		position:relative;
+		font-size:1.5em;
+	}
+
+	
+	/*Gestaltung des "Jetzt Kaufen" Buttons*/
+	.button{
+	
+		position:relative;
+		top:0.5em;
+		
+		
+		display:inline-block;
+		text-decoration:none;
+		font-family:Arial;
+		font-size:2em;
+		border:1px solid #fff;
+		border-radius:1em;
+		color:white;
+		background-color:#A8BCD0;
+		padding:5px 15px;
+		font-weight:bold;
+		box-shadow:3px 3px 4px #8CA0B2;
+		text-shadow:1px 1px 2px #6E91B2;
+	}
+	
+	.rabatt{
+		position:absolute;
+		top:-13.5em;
+		left:14em;
+		height:1.5em;
+		width:2em;
+		
+		padding:0.5em;
+		padding-top:0.9em;
+		padding-right:0.9em;
+		
+		background-color:red;
+		font-family: 'Montserrat', sans-serif;
+		color:white;
+		
+		border:1px solid red;
+		border-radius:100%;
+	}
+	
+	.fastweg{
+		position:absolute;
+		top:-20em;
+		left:19em;
+		width:5.4em;
+		height:3.9em;
+		
+		
+		padding:0.5em;
+		padding-top:2em;
+		background-color:red;
+		font-family: 'Montserrat', sans-serif;
+		font-size:0.7em;
+		color:white;
+		
+		border:1px solid red;
+		border-radius:100%;
+	}	
+}
+
