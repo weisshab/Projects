@@ -1,0 +1,221 @@
+body {
+	color: white;
+	background-color: black;
+	height: 200vh;
+	font-family: 'Questrial', sans-serif;
+	line-height:0.5em;
+	overflow:hidden;
+}
+
+#loading{
+	background-color:black;
+	color:white;
+	width:110%;
+	height:100vh;
+	position:fixed;
+	text-align :center;
+	z-index:99;
+	padding-top:10vh;
+	left:-5%;
+	font-size:7em;
+}
+#loading span{
+
+}
+
+canvas{
+	width:auto;
+}
+#info1 {
+	width: 30%;
+	position: absolute;
+	left: 40%;
+	top: 50em;
+	display: none;
+}
+#info2 {
+	width: 30%;
+	position: absolute;
+	left: 40%;
+	top: 145em;
+	display:none;
+}
+
+#text1 {
+	color: white;
+	display: none;
+	position: absolute;
+	left: 40%;
+	top: 24em;
+	font-size:2em;
+	line-height:1.2em;
+}
+#text2 {
+	color: white;
+
+	position: absolute;
+	left: 55%;
+	display:none;
+	top: 44.5em;
+	font-size:2em;
+	width:30%;
+	line-height:1.2em;
+}
+#text3 {
+	color: white;
+
+	position: absolute;
+	left: 40%;
+	display:none;
+	top: 73em;
+	font-size:2em;
+	width:40%;
+	line-height:1.2em;
+}
+
+#bar1, #bar2, #bar3 {
+	margin-bottom: 1em;
+	width: 0%;
+	height: 0.5em;
+	padding:0.5em;
+	background-color: white;
+	line-height: 1;
+	display: none;
+	background-image: url(../img/icons/ic_accessibility_white_24px.svg);
+	background-position: left center;
+	background-repeat: no-repeat;
+	left: 40%;
+	color: black;
+	font-size:2em;
+	border-radius:0.2em;
+}
+
+#bar1 {
+	position: absolute;
+	top: 26em;
+}
+
+#bar2 {
+	position: absolute;
+	top: 28em;
+}
+
+#bar3 {
+	position: absolute;
+	top: 30em;
+}
+
+.kreis:hover #druck1{
+	display: block;
+}
+.kreis:hover #druck2{
+	display: block;
+}
+
+#druck1 {
+	position: absolute;
+	top: 48em;
+	left: 40%;
+	display: none;
+	font-size: 1em;
+}
+
+
+#druck2 {
+	position: absolute;
+	top: 145em;
+	left: 40%;
+	display: none;
+	font-size: 1em;
+}
+
+
+#wolke {
+	position: absolute;
+	left: 0%;
+	width:100%;
+	top:10em;
+}
+
+#tropfen {
+	height: 10em;
+	width: 20%;
+	position: fixed;
+	left: 40%;
+}
+
+#mountain {
+	position: absolute;
+	top: 83em;
+	width: 35%;
+	display:none;
+}
+.slider {
+    -webkit-appearance: none;
+    position:absolute;
+    top:130em;
+    left:35em;
+    width: 20%;
+    height: 2em;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    display:none;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    background-image: url("../img/tropfen.png");
+}
+
+.slider::-moz-range-thumb {
+	border:none;
+       width: 3em;
+    height: 3em;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url("../img/WasserTropfen-178x300.png");
+    background-size:2em;
+    background-position-x:0.5em;
+    background-position-y:-0.5em;
+    background-repeat: no-repeat;
+}
+.eisbaer{
+	height:5em;
+	width:5em;
+	background-color:white;
+	float:left;
+	margin-left:1em;
+	position:absolute;
+	top:90vh;
+}
+#logo{
+	position:fixed;
+	width:20%;
+	top:20em;
+	left:40%;
+	z-index:10;
+	opacity:1;
+}
+footer{
+	position:absolute;
+	font-size:3em;
+	top:60em;
+	left:10%;
+	widtH:80%;
+}
+#erde {
+	/*background-image:url(../img/whiteEnd.png);*/
+	background-image: linear-gradient(to top, white 0%, black 50%)
+	width:110%;
+	margin-left:-5%;
+	height:20em;
+}
