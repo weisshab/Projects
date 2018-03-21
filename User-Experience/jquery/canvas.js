@@ -74,4 +74,3 @@ function animate() {
     }
     window.setTimeout(animate, 20);
 }
-//# sourceMappingURL=canvas.js.map

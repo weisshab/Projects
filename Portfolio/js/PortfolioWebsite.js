@@ -76,4 +76,3 @@ function main() {
 // Add EventListener - Funktion wird ausgeführt, sobald das DOM vollständig geladen ist
 document.addEventListener('DOMContentLoaded', main);
 window.addEventListener('resize', ausfhrng);
-//# sourceMappingURL=PortfolioWebsite.js.map

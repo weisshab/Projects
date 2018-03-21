@@ -1,0 +1,30 @@
+/* 
+In dieses Stylesheet wird jede Veränderung geschrieben, 
+welche nicht automatisch beim Export der Rätseldatei generiert wird.
+*/
+body{
+	width:190px
+}
+body div{
+	margin:0 1px 0 1px!important;
+}
+
+.Clues {
+	position:absolute;
+	width:100%!important;
+	margin-left:0!important;
+	bottom:0;
+	z-index:1000;
+}
+
+.Clues div {
+	height: 155px !important;
+	background-color:#f7f7f7;
+	width:183px!important;
+	padding-bottom:5px!important;
+}
+
+#CrosswordCompilerPuz{
+	height:585px!important;
+}
+

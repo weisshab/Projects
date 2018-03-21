@@ -621,4 +621,3 @@ var A13;
     }
     A13.generateFooter = generateFooter;
 })(A13 || (A13 = {}));
-//# sourceMappingURL=TrickzNFL.js.map
