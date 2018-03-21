@@ -3,7 +3,7 @@ In dieses Stylesheet wird jede Veränderung geschrieben,
 welche nicht automatisch beim Export der Rätseldatei generiert wird.
 */
 html{
-	width:190px
+	width:190px;
 }
 
 body{
