@@ -45,6 +45,27 @@ body{
 	width: 150px!important;
 }
 
+.ActionButton {
+    color:#FFF!important;
+    background-color: #006AB2!important;
+    height: 48px;
+    padding: 15px 32px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    border: none!important;
+    border-radius: 2px!important;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    text-align: center;
+    min-width: 165px!important;
+    text-decoration: none;
+    line-height: 0;
+}
+
 #CrosswordCompilerPuz{
 	width:100%!important;
 	height:480px!important;
