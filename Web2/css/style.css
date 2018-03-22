@@ -46,6 +46,7 @@ body{
 
 #CrosswordCompilerPuz style ~ div:last-child{
 	top:470px!important;
-	left:22px;
+	left:5px;
+	font-size: 10px!important;
 }
 
