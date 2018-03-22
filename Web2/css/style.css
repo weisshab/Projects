@@ -39,12 +39,18 @@ body{
 	height: auto!important;
 }
 
+.CompleteMsg{
+	position:absloute;
+	left:-110px!important;
+	width: 150px!important;
+}
+
 #CrosswordCompilerPuz{
 	width:100%!important;
 	height:480px!important;
 }
 
-#CrosswordCompilerPuz style ~ div:last-child{
+#CrosswordCompilerPuz style ~ div:nth-child(43){
 	top:470px!important;
 	left:5px;
 	font-size: 10px!important;
