@@ -9,8 +9,9 @@ html{
 body{
 	width:92%;
 }
-body div{
-	
+
+#CrosswordCompilerPuz div > p  span{
+	line-height:0.5!important;
 }
 
 .Clues {
@@ -40,11 +41,11 @@ body div{
 
 #CrosswordCompilerPuz{
 	width:100%!important;
-	height:580px!important;
+	height:480px!important;
 }
 
 #CrosswordCompilerPuz style ~ div:last-child{
-	top:570px!important;
+	top:470px!important;
 	left:22px;
 }
 
