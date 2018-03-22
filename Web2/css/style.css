@@ -3,32 +3,42 @@ In dieses Stylesheet wird jede Veränderung geschrieben,
 welche nicht automatisch beim Export der Rätseldatei generiert wird.
 */
 html{
-	width:190px;
+	width:220px;
 }
 
 body{
-	width:190px
+	width:92%;
 }
 body div{
-	margin:0 1px 0 1px!important;
+	
 }
 
 .Clues {
 	position:absolute;
+	top:270px;
+	border:1px solid sliver;
 	width:100%!important;
 	margin-left:0!important;
-	bottom:0;
-	z-index:1000;
+	z-index:1;
 }
 
 .Clues div {
-	height: 155px !important;
 	background-color:#f7f7f7;
 	width:183px!important;
-	padding-bottom:5px!important;
+	padding-bottom:15px!important;
+}
+
+.ClueList{
+	height: auto!important;
 }
 
 #CrosswordCompilerPuz{
+	width:100%!important;
 	height:585px!important;
+}
+
+#CrosswordCompilerPuz style ~ div:last-child{
+	top:575px!important;
+	left:22px;
 }
 
