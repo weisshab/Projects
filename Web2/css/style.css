@@ -15,11 +15,17 @@ body div{
 
 .Clues {
 	position:absolute;
-	top:270px;
+	top:265px;
 	border:1px solid sliver;
 	width:100%!important;
 	margin-left:0!important;
 	z-index:1;
+}
+
+.Clues center ~ div:last-child{
+	height:30px!important;
+	border-top:1px solid silver!important;
+	padding-top:5px!important;
 }
 
 .Clues div {
@@ -34,11 +40,11 @@ body div{
 
 #CrosswordCompilerPuz{
 	width:100%!important;
-	height:585px!important;
+	height:580px!important;
 }
 
 #CrosswordCompilerPuz style ~ div:last-child{
-	top:575px!important;
+	top:570px!important;
 	left:22px;
 }
 
