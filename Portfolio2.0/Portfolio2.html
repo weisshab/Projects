@@ -4,152 +4,162 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="keywords" content="Portfolio, HFU, EIA1, Bastian Weisshaar"> 	<!-- Keywords -->
-  		<meta name="author" content="Bastian Weisshaar">		<!-- Ersteller -->
-  		<meta name="date" content="2018-04-26">					<!-- Erstellungsdatum -->
-  		<link rel="icon" href="#">   			<!-- Logo im Tab -->
-		<title>Bastian Weisshaar Portfolio</title>
-		
-		<link rel="stylesheet" type="text/css" href="css/portfolio2.css">
-		<script src="js/main.js"></script>
-		
-		<!-- Bootstrap CDN -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-		
-		<!-- viewport wird auf die Device-Breite initialisiert -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<!-- Schriftart eingebunden -->
+ 		<meta name="author" content="Bastian Weisshaar">		<!-- Ersteller -->
+ 		<meta name="date" content="2018-04-26">					<!-- Erstellungsdatum -->
+ 		<link rel="icon" href="#">   			<!-- Logo im Tab -->
+	<title>Bastian Weisshaar Portfolio</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/portfolio2.css">
+	<script src="js/main.js"></script>
+	
+	<!-- Bootstrap CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	
+	<!-- viewport wird auf die Device-Breite initialisiert -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Schriftart eingebunden -->
 
-	</head>
+</head>
+
+<style>	
+	body{
+		background: #ffffdd url("img/background.jpg")center no-repeat;
+		background-size:cover;
+		background-attachment: fixed;
+	}
+
+	h1{
+		font-weight:500;
+	}
 	
-	<style>	
-		body{
-			background: #ffffdd url("img/background.jpg")center no-repeat;
-			background-size:cover;
-			background-attachment: fixed;
-		}
+	header{
+		position:fixed;
+		top:0;
+		z-index:1;
+	}
 	
-		h1{
-			font-weight:500;
-		}
+	header .row{
+		align-items:center;
+		border-radius:0;
+	}
+	
+	main{
+		position:relative;
+		top:89px;
+		margin-bottom:119px;
+		opacity:0.95;
+	}
+	
+	.row {
+		padding:1rem 0;
+		border-bottom: 1px solid #dfdfdf;
+		background-color:#fff;
 		
-		header{
-			position:fixed;
-			top:0;
-			z-index:1;
-		}
+	}
+	
+	main img{
+		width:100%;
+	}
+	
+	article{
+		margin-bottom:30px;
+	}
+	
+	figcaption{
+		position:absolute;
+		bottom: 15px;
+		background-color: white;
+		width: 50%;
+		line-height: 3em;
+		font-size: 18px;
+		text-align: right;
+		padding-right: 10px;
+	}
+	
+	figcaption:hover .exp-txt{
+		display:block;
+	}
+</style>
+
+<body>
+	<header class="container-fluid">
+		<div class="row">
+			<h1 class="col-10 col-md-6">BWhite</h1>
+			<span class="col-12 col-md-2 d-none d-md-block"><a href="#">THAT'S ME</a></span>
+			<span class="col-12 col-md-2 d-none d-md-block"><a href="#">EXPERIENCE</a></span>
+			<span class="col-12 col-md-2 d-none d-md-block"><a href="#">PROJECTS</a></span>
+		</div>
 		
-		header .row{
-			align-items:center;
-			border-radius:0;
-		}
-		
-		main{
-			position:relative;
-			top:89px;
-			margin-bottom:119px;
-			opacity:0.95;
-		}
-		
-		.row {
-			padding:1rem 0;
-			border-bottom: 1px solid #dfdfdf;
-			background-color:#fff;
-			
-		}
-		
-		main img{
-			width:100%;
-		}
-		
-		article{
-			margin-bottom:30px;
-		}
-		
-		figcaption{
-			position:absolute;
-			bottom: 15px;
-			background-color: white;
-			width: 45%;
-			line-height: 3em;
-			font-size: 18px;
-			text-align: right;
-			padding-right: 10px;
-		}
-	</style>
+	</header>
 	
 	<body>
-		<header class="container-fluid">
+		<main>
+			<section class="container">
+				<article class="row">
+					<figure class="col-12 col-md-7">
+						<img src="https://placehold.it/1920x1080">
+					</figure>
+					
+					<div class="col-12 col-md-5">
+					<h2>THAT'S ME</h2>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+					Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					</div>
+				</article>
+			</section>
+			
+			<section class="container">
+				<article class="row">
+					<h2 class="col-12">EXPERIENCE</h2>
+					
+					<figure class="col-12 col-md-6">
+						<img src="https://placehold.it/1920x1080">
+						<figcaption>
+							<h3>Experience1</h3>
+							<div class="exp-txt d-none">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</figcaption>
+					</figure>
+					
+					<figure class="col-12 col-md-6">
+						<img src="https://placehold.it/1920x1080">
+						<figcaption>
+							<h3>Experience2</h3>
+							<div class="exp-txt d-none">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</figcaption>
+					</figure>
+					
+				</article>
+			</section>
+			
+			<section class="container">
+				<article class="row">
+					<h2 class="col-12">PROJECTS</h2>
+					<figure class="col-12 col-md-3">
+						<img src="https://placehold.it/1920x1080">
+					</figure>
+					<figure class="col-12 col-md-3">
+						<img src="https://placehold.it/1920x1080">
+					</figure>
+					<figure class="col-12 col-md-3">
+						<img src="https://placehold.it/1920x1080">
+					</figure>
+					<figure class="col-12 col-md-3">
+						<img src="https://placehold.it/1920x1080">
+					</figure>
+				</article>
+			</section>
+		</main>
+		
+		<footer class="container-fluid" style="background-color: #fff; position:relative;">
 			<div class="row">
-				<h1 class="col-10 col-md-6">BWhite</h1>
-				<span class="col-12 col-md-2 d-none d-md-block"><a href="#">THAT'S ME</a></span>
-				<span class="col-12 col-md-2 d-none d-md-block"><a href="#">EXPERIENCE</a></span>
-				<span class="col-12 col-md-2 d-none d-md-block"><a href="#">PROJECTS</a></span>
+				<h2 class="col-12">Hello</h2>
 			</div>
-			
-		</header>
-		
-		<body>
-			<main>
-				<section class="container">
-					<article class="row">
-						<figure class="col-12 col-md-7">
-							<img src="https://placehold.it/1920x1080">
-						</figure>
-						
-						<div class="col-12 col-md-5">
-						<h2>THAT'S ME</h2>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-						</div>
-					</article>
-				</section>
-				
-				<section class="container">
-					<article class="row">
-						<h2 class="col-12">EXPERIENCE</h2>
-						
-						<figure class="col-12 col-md-6">
-							<img src="https://placehold.it/1920x1080">
-							<figcaption>Experience1</figcaption>
-						</figure>
-						
-						<figure class="col-12 col-md-6">
-							<img src="https://placehold.it/1920x1080">
-							<figcaption>Experience2</figcaption>
-						</figure>
-						
-					</article>
-				</section>
-				
-				<section class="container">
-					<article class="row">
-						<h2 class="col-12">PROJECTS</h2>
-						<figure class="col-12 col-md-3">
-							<img src="https://placehold.it/1920x1080">
-						</figure>
-						<figure class="col-12 col-md-3">
-							<img src="https://placehold.it/1920x1080">
-						</figure>
-						<figure class="col-12 col-md-3">
-							<img src="https://placehold.it/1920x1080">
-						</figure>
-						<figure class="col-12 col-md-3">
-							<img src="https://placehold.it/1920x1080">
-						</figure>
-					</article>
-				</section>
-			</main>
-			
-			<footer class="container-fluid" style="background-color: #fff; position:relative;">
-				<div class="row">
-					<h2 class="col-12">Hello</h2>
-				</div>
-			</footer>
-		
-		
-		</body>
+		</footer>
+	
+	
 	</body>
+</body>
