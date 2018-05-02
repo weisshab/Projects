@@ -77,9 +77,10 @@
 		bottom: 15px;
 		background-color: white;
 		width: 85%;
+		max-height: 85%;
 		font-size: 1em;
 		text-align: right;
-		padding-right: 10px;
+		padding:0 15px;
 		cursor:pointer;
 	}
 	
@@ -88,8 +89,20 @@
 		text-align:left;
 	}
 	
+	.nav{
+		text-align: center;
+	}
+	
+	.menu{
+		margin:0;
+		text-align: center;
+	}
+	
 	.footer{
 		text-align:center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
 	}
 	
 	.footer div:nth-child(3){
@@ -101,8 +114,35 @@
 		width:35%;
 	}
 	
-	.footer h3{
-		margin-bottom:30px;
+	.align-l{
+		text-align:left;
+	}
+	
+	.menuC {
+		display:none;	
+		position: absolute;
+		right: 0;
+		margin:0;
+		text-align: center;		
+	}
+	
+	.text-beschreibung{
+		margin-bottom:15px;
+	}
+	
+	.nav-m{
+		position:absolute;
+		top: 89px;
+		background-color: #fff;
+		padding: 15px;
+		width: 100%;
+		opacity:0.9;
+		
+		display:none;	
+	}
+	
+	.nav-m span{
+		border-bottom:1px solid lightgray;
 	}
 	
 	@media (min-width:750px){
@@ -113,14 +153,6 @@
 		.footer div:nth-child(3){
 			border:none;
 		}	
-		
-		.footer div:nth-child(2){
-			text-align:right;
-		}
-		
-		.footer div:nth-child(4){
-			text-align:left;
-		}
 	}
 
 </style>
@@ -128,10 +160,24 @@
 <body>
 	<header class="container-fluid">
 		<div class="row">
-			<h1 class="col-10 col-md-6">BWhite</h1>
-			<span class="col-12 col-md-2 d-none d-md-block"><a href="#">THAT'S ME</a></span>
-			<span class="col-12 col-md-2 d-none d-md-block"><a href="#">EXPERIENCE</a></span>
-			<span class="col-12 col-md-2 d-none d-md-block"><a href="#">PROJECTS</a></span>
+			<h1 class="col-8 col-md-6">White</h1>
+			<span class="col-12 col-md-2 d-none d-md-block nav"><a href="#ME">THAT'S ME</a></span>
+			<span class="col-12 col-md-2 d-none d-md-block nav"><a href="#EXP">EXPERIENCE</a></span>
+			<span class="col-12 col-md-2 d-none d-md-block nav"><a href="#PROJ">PROJECTS</a></span>
+			
+			<figure class="col-4 d-md-none menu">
+				<img src="img/menuButton.png" alt="Menu" style="height:2em;">
+			</figure>
+			
+			<figure class="col-4 d-md-none menuC">
+				<img src="img/closeButton.png" alt="Menu" style="height:2em;">
+			</figure>
+			
+			<div class="nav-m">
+				<span class="col-12 col-md-2 d-md-block nav"><a href="#ME">THAT'S ME</a></span>
+				<span class="col-12 col-md-2 d-md-block nav"><a href="#EXP">EXPERIENCE</a></span>
+				<span class="col-12 col-md-2 d-md-block nav"><a href="#PROJ">PROJECTS</a></span>
+			</div>
 		</div>
 		
 	</header>
@@ -145,7 +191,7 @@
 					</figure>
 					
 					<div class="col-12 col-md-5">
-					<h2>THAT'S ME</h2>
+					<h2 id="ME">THAT'S ME</h2>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
@@ -156,13 +202,13 @@
 			
 			<section class="container">
 				<article class="row">
-					<h2 class="col-12">EXPERIENCE</h2>
+					<h2 id="EXP" class="col-12">EXPERIENCE</h2>
 					
 					<figure class="col-12 col-md-6">
 						<img src="https://placehold.it/1920x1080">
 						<figcaption id="fig01">
 							<h3 id="exp01">Experience1</h3>
-							<div id="exp-txt01" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+							<div id="exp-txt01" class="text-beschreibung">orem ipsum dolor sit amet, consectetur adipiscing elit, <a href="#">mehr</a></div>
 						</figcaption>
 					</figure>
 					
@@ -170,7 +216,7 @@
 						<img src="https://placehold.it/1920x1080">
 						<figcaption id="fig02">
 							<h3 id="exp02">Experience2</h3>
-							<div id="exp-txt02" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+							<div id="exp-txt02" class="text-beschreibung">orem ipsum dolor sit amet, consectetur adipiscing elit, <a href="#">mehr</a></div>
 						</figcaption>
 					</figure>
 					
@@ -179,33 +225,33 @@
 			
 			<section class="container">
 				<article class="row">
-					<h2 class="col-12">PROJECTS</h2>
-					<figure class="col-12 col-md-4">
+					<h2 id="PROJ" class="col-12">PROJECTS</h2>
+					<figure class="col-12 col-md-6">
 						<img src="https://placehold.it/1920x1080">
 						<figcaption id="fig11">
 							<h3 id="proj01">Project1</h3>
-							<div id="proj-txt01" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+							<div id="proj-txt01" class="text-beschreibung">orem ipsum dolor sit amet, consectetur adipiscing elit, <a href="#">mehr</a>.</div>
 						</figcaption>
 					</figure>
-					<figure class="col-12 col-md-4">
+					<figure class="col-12 col-md-6">
 						<img src="https://placehold.it/1920x1080">
 						<figcaption id="fig12">
 							<h3 id="proj02">Project2</h3>
-							<div id="proj-txt02" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+							<div id="proj-txt02" class="text-beschreibung">orem ipsum dolor sit amet, consectetur adipiscing elit, <a href="#">mehr</a></div>
 						</figcaption>
 					</figure>
-					<figure class="col-12 col-md-4">
+					<figure class="col-12 col-md-6">
 						<img src="https://placehold.it/1920x1080">
 						<figcaption id="fig13">
 							<h3 id="proj03">Project3</h3>
-							<div id="proj-txt03" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+							<div id="proj-txt03" class="text-beschreibung">orem ipsum dolor sit amet, consectetur adipiscing elit, <a href="#">mehr</a></div>
 						</figcaption>
 					</figure>
-					<figure class="col-12 col-md-4">
+					<figure class="col-12 col-md-6">
 						<img src="https://placehold.it/1920x1080">
 						<figcaption id="fig14">
 							<h3 id="proj04">Project4</h3>
-							<div id="proj-txt04" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+							<div id="proj-txt04" class="text-beschreibung">orem ipsum dolor sit amet, consectetur adipiscing elit, <a href="#">mehr</a></div>
 						</figcaption>
 					</figure>
 				</article>
@@ -214,10 +260,10 @@
 		
 		<footer class="container-fluid" style="background-color: #fff; position:relative;">
 			<div class="row footer">
-					<h3 class="col-12 d-none d-md-block">Contact me!</h3>
-					<div class="col-4"><a href="#"><img src="img/Instagram.png" alt="Instagram"></a></div>
-					<div class="col-4"><a href="#"><img src="img/facebook.png" alt="Facebook"></a></div>
-					<div class="col-4"><a href="#"><img src="img/mail.png" alt="E-Mail"></a></div>
+					<h3 class="col-12 col-md-3 d-none d-md-block">Contact me!</h3>
+					<div class="col-4 col-md-3"><a href="https://www.instagram.com/basti_396/"><img src="img/Instagram.png" alt="Instagram"></a></div>
+					<div class="col-4 col-md-3"><a href="https://www.facebook.com/bastian.weisshaar"><img src="img/facebook.png" alt="Facebook"></a></div>
+					<div class="col-4 col-md-3"><a href="mailto:Bastian.Weisshaar@hs-furtwangen.de"><img src="img/mail.png" alt="E-Mail"></a></div>
 			</div>
 		</footer>
 	
