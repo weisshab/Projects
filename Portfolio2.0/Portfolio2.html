@@ -8,13 +8,14 @@
  		<meta name="date" content="2018-04-26">					<!-- Erstellungsdatum -->
  		<link rel="icon" href="#">   			<!-- Logo im Tab -->
 	<title>Bastian Weisshaar Portfolio</title>
-	
-	<link rel="stylesheet" type="text/css" href="css/portfolio2.css">
-	<script src="js/main.js"></script>
-	
+
 	<!-- Bootstrap CDN -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/portfolio2.css">
+	
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
 	
 	<!-- viewport wird auf die Device-Breite initialisiert -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,20 +68,34 @@
 		margin-bottom:30px;
 	}
 	
+	li{
+		list-style: none;
+	}
+	
 	figcaption{
 		position:absolute;
 		bottom: 15px;
 		background-color: white;
-		width: 50%;
-		line-height: 3em;
-		font-size: 18px;
+		width: 85%;
+		font-size: 1em;
 		text-align: right;
 		padding-right: 10px;
+		cursor:pointer;
 	}
 	
-	figcaption:hover .exp-txt{
-		display:block;
+	figcaption:hover{
+		background-color:#d9d9d9;
 	}
+	
+	#exp-txt01, #exp-txt02, #proj-txt01, #proj-txt02, #proj-txt03, #proj-txt04{
+		display:none;
+		text-align:left;
+	}
+	
+	footer > div{
+		text-align:center;
+	}
+
 </style>
 
 <body>
@@ -118,17 +133,17 @@
 					
 					<figure class="col-12 col-md-6">
 						<img src="https://placehold.it/1920x1080">
-						<figcaption>
-							<h3>Experience1</h3>
-							<div class="exp-txt d-none">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						<figcaption id="fig01">
+							<h3 id="exp01">Experience1</h3>
+							<div id="exp-txt01" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 						</figcaption>
 					</figure>
 					
 					<figure class="col-12 col-md-6">
 						<img src="https://placehold.it/1920x1080">
-						<figcaption>
-							<h3>Experience2</h3>
-							<div class="exp-txt d-none">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						<figcaption id="fig02">
+							<h3 id="exp02">Experience2</h3>
+							<div id="exp-txt02" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 						</figcaption>
 					</figure>
 					
@@ -140,15 +155,31 @@
 					<h2 class="col-12">PROJECTS</h2>
 					<figure class="col-12 col-md-3">
 						<img src="https://placehold.it/1920x1080">
+						<figcaption id="fig11">
+							<h3 id="proj01">Project1</h3>
+							<div id="proj-txt01" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</figcaption>
 					</figure>
 					<figure class="col-12 col-md-3">
 						<img src="https://placehold.it/1920x1080">
+						<figcaption id="fig12">
+							<h3 id="proj02">Project2</h3>
+							<div id="proj-txt02" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</figcaption>
 					</figure>
 					<figure class="col-12 col-md-3">
 						<img src="https://placehold.it/1920x1080">
+						<figcaption id="fig13">
+							<h3 id="proj03">Project3</h3>
+							<div id="proj-txt03" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</figcaption>
 					</figure>
 					<figure class="col-12 col-md-3">
 						<img src="https://placehold.it/1920x1080">
+						<figcaption id="fig14">
+							<h3 id="proj04">Project4</h3>
+							<div id="proj-txt04" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+						</figcaption>
 					</figure>
 				</article>
 			</section>
@@ -156,7 +187,10 @@
 		
 		<footer class="container-fluid" style="background-color: #fff; position:relative;">
 			<div class="row">
-				<h2 class="col-12">Hello</h2>
+					<div class="col-12"><a href="#">Impressum</a></div>
+					<div class="col-4"><a href="#"><img src="#" alt="Instagram"></a></div>
+					<div class="col-4"><a href="#"><img src="#" alt="Facebook"></a></div>
+					<div class="col-4"><a href="#"><img src="#" alt="E-Mail"></a></div>
 			</div>
 		</footer>
 	
