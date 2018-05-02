@@ -83,10 +83,6 @@
 		cursor:pointer;
 	}
 	
-	figcaption:hover{
-		background-color:#d9d9d9;
-	}
-	
 	#exp-txt01, #exp-txt02, #proj-txt01, #proj-txt02, #proj-txt03, #proj-txt04{
 		display:none;
 		text-align:left;
@@ -96,12 +92,23 @@
 		text-align:center;
 	}
 	
+	.footer div:nth-child(3){
+		border-left:1px solid #bbb; 
+		border-right:1px solid #bbb;
+	}
+	
 	.footer img {
 		width:35%;
 	}
 	
 	.footer h3{
 		margin-bottom:30px;
+	}
+	
+	@media (min-width:750px){
+		.footer img{
+			width:10%;
+		}
 	}
 
 </style>
@@ -161,28 +168,28 @@
 			<section class="container">
 				<article class="row">
 					<h2 class="col-12">PROJECTS</h2>
-					<figure class="col-12 col-md-3">
+					<figure class="col-12 col-md-4">
 						<img src="https://placehold.it/1920x1080">
 						<figcaption id="fig11">
 							<h3 id="proj01">Project1</h3>
 							<div id="proj-txt01" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 						</figcaption>
 					</figure>
-					<figure class="col-12 col-md-3">
+					<figure class="col-12 col-md-4">
 						<img src="https://placehold.it/1920x1080">
 						<figcaption id="fig12">
 							<h3 id="proj02">Project2</h3>
 							<div id="proj-txt02" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 						</figcaption>
 					</figure>
-					<figure class="col-12 col-md-3">
+					<figure class="col-12 col-md-4">
 						<img src="https://placehold.it/1920x1080">
 						<figcaption id="fig13">
 							<h3 id="proj03">Project3</h3>
 							<div id="proj-txt03" class="">orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 						</figcaption>
 					</figure>
-					<figure class="col-12 col-md-3">
+					<figure class="col-12 col-md-4">
 						<img src="https://placehold.it/1920x1080">
 						<figcaption id="fig14">
 							<h3 id="proj04">Project4</h3>
@@ -195,7 +202,7 @@
 		
 		<footer class="container-fluid" style="background-color: #fff; position:relative;">
 			<div class="row footer">
-					<h3 class="col-12">Contact me!</h3>
+					<h3 class="col-12 d-none d-md-block">Contact me!</h3>
 					<div class="col-4"><a href="#"><img src="img/Instagram.png" alt="Instagram"></a></div>
 					<div class="col-4"><a href="#"><img src="img/facebook.png" alt="Facebook"></a></div>
 					<div class="col-4"><a href="#"><img src="img/mail.png" alt="E-Mail"></a></div>
