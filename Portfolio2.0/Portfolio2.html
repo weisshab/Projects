@@ -56,7 +56,7 @@
 	.row {
 		padding:1rem 0;
 		border-bottom: 1px solid #dfdfdf;
-		background-color:#fff;
+		background-color:#F2F2F2;;
 		
 	}
 	
@@ -75,13 +75,16 @@
 	figcaption{
 		position:absolute;
 		bottom: 15px;
-		background-color: #F5ECCE;
+		background-color: #F2F2F2;
 		width: 85%;
 		max-height: 85%;
 		font-size: 1em;
 		text-align: right;
 		padding:0 15px;
 		cursor:pointer;
+		opacity: 0.95;
+		border-right: 1px solid gray;
+		border-bottom: 1px solid gray;
 	}
 	
 	#exp-txt01, #exp-txt02, #proj-txt01, #proj-txt02, #proj-txt03, #proj-txt04{
@@ -96,6 +99,7 @@
 	.menu{
 		margin:0;
 		text-align: center;
+		border-right:1px solid lightgray;
 	}
 	
 	.footer{
@@ -120,10 +124,9 @@
 	
 	.menuC {
 		display:none;	
-		position: absolute;
-		right: 0;
 		margin:0;
-		text-align: center;		
+		text-align: center;	
+		border-right:1px solid lightgray;	
 	}
 	
 	.text-beschreibung{
@@ -160,18 +163,18 @@
 <body>
 	<header class="container-fluid">
 		<div class="row">
-			<h1 class="col-8 col-md-6">White</h1>
+			<figure class="col-3 d-md-none menuC">
+				<img src="img/closeButton.png" alt="Menu" style="height:2em;">
+			</figure>
+			
+			<figure class="col-3 d-md-none menu">
+				<img src="img/menuButton.png" alt="Menu" style="height:2em;">
+			</figure>
+		
+			<h1 class="col-9 col-md-6">White</h1>
 			<span class="col-12 col-md-2 d-none d-md-block nav"><a href="#ME">THAT'S ME</a></span>
 			<span class="col-12 col-md-2 d-none d-md-block nav"><a href="#EXP">EXPERIENCE</a></span>
 			<span class="col-12 col-md-2 d-none d-md-block nav"><a href="#PROJ">PROJECTS</a></span>
-			
-			<figure class="col-4 d-md-none menu">
-				<img src="img/menuButton.png" alt="Menu" style="height:2em;">
-			</figure>
-			
-			<figure class="col-4 d-md-none menuC">
-				<img src="img/closeButton.png" alt="Menu" style="height:2em;">
-			</figure>
 			
 			<div class="nav-m">
 				<span class="col-12 col-md-2 d-md-block nav"><a href="#ME">THAT'S ME</a></span>

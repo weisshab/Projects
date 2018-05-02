@@ -45,14 +45,14 @@ $(document).ready(function() {
 	});
 	
 	$(".menu").click(function() {
-		$(this).hide(200);
-		$(".menuC").show(200);
+		$(this).hide();
+		$(".menuC").show();
 		$(".nav-m").show(200);
 	});
 	
 	$(".menuC").click(function() {
-		$(this).hide(200);
-		$(".menu").show(200);
+		$(this).hide();
+		$(".menu").show();
 		$(".nav-m").hide(200);
 	});
 
