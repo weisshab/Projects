@@ -50,6 +50,6 @@ $(document).ready(function() {
 
 });
 
-function openMenu1(){
-	document.querySelector(".wrapper-menu").classList.toggle("open"); 
+function openMenu1(x){
+	x.classList.toggle("open"); 
 }
