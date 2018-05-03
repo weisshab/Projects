@@ -44,16 +44,12 @@ $(document).ready(function() {
 		$("#proj-txt04").toggle(300);
 	});
 	
-	$(".menu").click(function() {
-		$(this).hide();
-		$(".menuC").show();
-		$(".nav-m").show(200);
-	});
-	
-	$(".menuC").click(function() {
-		$(this).hide();
-		$(".menu").show();
-		$(".nav-m").hide(200);
+	$(".wrapper-menu").click(function() {
+		$(".nav-m").toggle(200);
 	});
 
 });
+
+function openMenu1(){
+	document.querySelector(".wrapper-menu").classList.toggle("open"); 
+}
