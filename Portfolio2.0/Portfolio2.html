@@ -95,13 +95,27 @@
 	}
 	
 	.nav{
-		text-align: center;
+		font-size: 1.3em;
+		line-height: 2em;
 	}
 	
 	.menu{
 		margin:0;
 		text-align: center;
 		border-right:1px solid lightgray;
+		width:75px;
+	}
+	
+	.menuC {
+		display:none;	
+		margin:0;
+		text-align: center;	
+		border-right:1px solid lightgray;
+		width:75px;	
+	}
+	
+	.menu img, .menuC img{
+		height:1.8em
 	}
 	
 	.footer{
@@ -117,18 +131,11 @@
 	}
 	
 	.footer img {
-		width:35%;
+		width:33.25px;
 	}
 	
 	.align-l{
 		text-align:left;
-	}
-	
-	.menuC {
-		display:none;	
-		margin:0;
-		text-align: center;	
-		border-right:1px solid lightgray;	
 	}
 	
 	.text-beschreibung{
@@ -158,6 +165,15 @@
 		.footer div:nth-child(3){
 			border:none;
 		}	
+		
+		.nav {
+		    font-size: 22px;
+		    margin-bottom: 15px;
+		}
+		
+		.nav-m{
+			width:400px;
+		}
 	}
 
 </style>
@@ -165,23 +181,20 @@
 <body>
 	<header class="container-fluid">
 		<div class="row">
-			<figure class="col-3 d-md-none menuC">
-				<img src="img/closeButton.png" alt="Menu" style="height:2em;">
+			<figure class="menuC">
+				<img src="img/closeButton.png" alt="Menu">
 			</figure>
 			
-			<figure class="col-3 d-md-none menu">
-				<img src="img/menuButton.png" alt="Menu" style="height:2em;">
+			<figure class="menu">
+				<img src="img/menuButton.png" alt="Menu">
 			</figure>
 		
 			<h1 class="col-9 col-md-6">White</h1>
-			<span class="col-12 col-md-2 d-none d-md-block nav"><a href="#ME">THAT'S ME</a></span>
-			<span class="col-12 col-md-2 d-none d-md-block nav"><a href="#EXP">EXPERIENCE</a></span>
-			<span class="col-12 col-md-2 d-none d-md-block nav"><a href="#PROJ">PROJECTS</a></span>
 			
 			<div class="nav-m">
-				<span class="col-12 col-md-2 d-md-block nav"><a href="#ME">THAT'S ME</a></span>
-				<span class="col-12 col-md-2 d-md-block nav"><a href="#EXP">EXPERIENCE</a></span>
-				<span class="col-12 col-md-2 d-md-block nav"><a href="#PROJ">PROJECTS</a></span>
+				<span class="col-12 nav"><a href="#ME">THAT'S ME</a></span>
+				<span class="col-12 nav"><a href="#EXP">EXPERIENCE</a></span>
+				<span class="col-12 nav"><a href="#PROJ">PROJECTS</a></span>
 			</div>
 		</div>
 		
