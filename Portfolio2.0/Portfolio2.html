@@ -27,7 +27,7 @@
 
 <style>	
 	body{
-		background: lightblue /*url("img/background.jpg")center no-repeat*/;
+		background: #F7F2E0 /*url("img/background.jpg")center no-repeat*/;
 		background-size:cover;
 		background-attachment: fixed;
 		font-family: 'Dosis', sans-serif;
@@ -48,13 +48,11 @@
 		align-items:center;
 		border-radius:0;
 		border-right:none;
-		
+		padding:15px 0;
 	}
 	
 	main{
-		position:relative;
-		top:89px;
-		margin-bottom:219px;
+		margin-top:87px;
 	}
 	
 	.row {
@@ -128,13 +126,14 @@
 	}
 	
 	.footer{
-		position: absolute;
-		bottom: 0;
-		width: 100%;
 		text-align:center;
 		-webkit-box-align: center;
 		-ms-flex-align: center;
 		align-items: center;
+	}
+	
+	.footer .row{
+		border:none;
 	}
 	
 	.footer div:nth-child(3){
@@ -220,8 +219,7 @@
 	
 	@media (min-width:750px){
 		main{
-			top:117px;
-			margin-bottom:220px;
+			top:87px;
 		}
 		
 		.row{
@@ -277,13 +275,6 @@
 <body>
 	<header class="container-fluid">
 		<div class="row">
-			<!-- <figure class="menuC">
-				<img src="img/closeButton.png" alt="Menu">
-			</figure>
-			
-			<figure class="menu">
-				<img src="img/menuButton.png" alt="Menu">
-			</figure> -->
 			
 			<div onclick="openMenu1(this)" class="wrapper-menu">
   				<div class="line-menu half start"></div>
@@ -297,6 +288,14 @@
 				<span class="col-12 nav"><a href="#ME">THAT'S ME</a></span>
 				<span class="col-12 nav"><a href="#EXP">EXPERIENCE</a></span>
 				<span class="col-12 nav"><a href="#PROJ">PROJECTS</a></span>
+				<span class="col-12 nav">Impressum</span>
+				<div class="col-12">
+					<ul>
+						<li>Bastian Weisshaar</li>
+						<li>Sommerbergstr. 26</li>
+						<li>78136 Schonach</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		
