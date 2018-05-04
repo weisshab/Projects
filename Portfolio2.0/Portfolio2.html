@@ -51,8 +51,12 @@
 		padding:15px 0;
 	}
 	
+	ul{
+		padding-left: 0;
+	}
+	
 	main{
-		margin-top:87px;
+		padding-top:87px;
 	}
 	
 	.row {
@@ -155,12 +159,13 @@
 	
 	.nav-m{
 		position:absolute;
-		top: 89px;
+		top: 86px;
 		background-color: #fff;
+		border-bottom:1px solid silver;
 		padding: 15px;
 		width: 100%;
-		opacity:0.9;
-		
+		opacity:1;
+		left: 0;
 		display:none;	
 	}
 	
@@ -215,11 +220,17 @@
 .open .line-menu.end {
   transform: rotate(-90deg) translateX(-3px);
 }
+
+.impressum{
+	font-size:0.7em; 
+	list-style-type: circle;
+	margin-left: 2em;
+	line-height:normal;
+}
 	
 	
 	@media (min-width:750px){
 		main{
-			top:87px;
 		}
 		
 		.row{
@@ -262,7 +273,7 @@
 		.nav-m{
 			width:220px;
 			top: 65px;
-			background-color: #F2F2F2;
+			background-color: #fff;
 		}
 	}
 
@@ -288,12 +299,12 @@
 				<span class="col-12 nav"><a href="#ME">THAT'S ME</a></span>
 				<span class="col-12 nav"><a href="#EXP">EXPERIENCE</a></span>
 				<span class="col-12 nav"><a href="#PROJ">PROJECTS</a></span>
-				<span class="col-12 nav">Impressum</span>
-				<div class="col-12">
+				<div class="nav">
 					<ul>
-						<li>Bastian Weisshaar</li>
-						<li>Sommerbergstr. 26</li>
-						<li>78136 Schonach</li>
+						<li>Impressum</li>
+						<li class="impressum">Bastian Weisshaar</li>
+						<li class="impressum">Sommerbergstr. 26</li>
+						<li class="impressum">78136 Schonach</li>
 					</ul>
 				</div>
 			</div>
@@ -303,14 +314,14 @@
 	
 	<body>
 		<main>
-			<section class="container">
+			<section id="ME" class="container">
 				<article class="row">
 					<figure class="col-12 col-md-7">
 						<img src="https://placehold.it/1920x1080">
 					</figure>
 					
 					<div class="col-12 col-md-5">
-					<h2 id="ME">THAT'S ME</h2>
+					<h2>THAT'S ME</h2>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
@@ -319,9 +330,9 @@
 				</article>
 			</section>
 			
-			<section class="container">
+			<section id="EXP" class="container">
 				<article class="row">
-					<h2 id="EXP" class="col-12">EXPERIENCE</h2>
+					<h2 class="col-12">EXPERIENCE</h2>
 					
 					<figure class="col-12 col-md-6">
 						<img src="https://placehold.it/1920x1080">
@@ -342,9 +353,9 @@
 				</article>
 			</section>
 			
-			<section class="container">
+			<section id="PROJ" class="container">
 				<article class="row">
-					<h2 id="PROJ" class="col-12">PROJECTS</h2>
+					<h2 class="col-12">PROJECTS</h2>
 					<figure class="col-12 col-md-6">
 						<img src="https://placehold.it/1920x1080">
 						<figcaption id="fig11">
