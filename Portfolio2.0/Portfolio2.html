@@ -177,57 +177,58 @@
 	
 	
 	.wrapper-menu {
-  width: 33px;
-  height: 33px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  transition: transform 330ms ease-out;
-  margin: 0 15px;
-  margin-bottom:5px;
-}
-
-.wrapper-menu.open {
-  transform: rotate(-45deg);  
-}
-
-.line-menu {
-  background-color: #000;
-  border-radius: 5px;
-  width: 100%;
-  height: 6px;
-}
-
-.line-menu.half {
-  width: 50%;
-}
-
-.line-menu.start {
-  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transform-origin: right;
-}
-
-.open .line-menu.start {
-  transform: rotate(-90deg) translateX(3px);
-}
-
-.line-menu.end {
-  align-self: flex-end;
-  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transform-origin: left;
-}
-
-.open .line-menu.end {
-  transform: rotate(-90deg) translateX(-3px);
-}
-
-.impressum{
-	font-size:0.7em; 
-	list-style-type: circle;
-	margin-left: 2em;
-	line-height:normal;
-}
+	  width: 33px;
+	  height: 33px;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: space-between;
+	  cursor: pointer;
+	  transition: transform 330ms ease-out;
+	  margin: 0 15px;
+	  margin-bottom:5px;
+	}
+	
+	.wrapper-menu.open {
+	  transform: rotate(-45deg);  
+	}
+	
+	.line-menu {
+	  background-color: #000;
+	  border-radius: 5px;
+	  width: 100%;
+	  height: 6px;
+	}
+	
+	.line-menu.half {
+	}
+	
+	.line-menu.start {
+	  transition: 330ms cubic-bezier(0.5, 0.1, 0.3, 0.7);
+	  transform-origin: right;
+	}
+	
+	.open .line-menu.start {
+	  transform: rotate(-90deg) translateX(3px);
+	  width:50%;
+	}
+	
+	.line-menu.end {
+	  align-self: flex-end;
+	  transition: 330ms cubic-bezier(0.5, 0.1, 0.3, 0.7);
+	  transform-origin: left;
+	}
+	
+	.open .line-menu.end {
+	  transform: rotate(-90deg) translateX(-3px);
+	  width:50%;
+	}
+	
+	.impressum{
+		font-size:0.7em; 
+		list-style-type: circle;
+		margin-left: 2em;
+		line-height:normal;
+	}
 
 	.copyright{
 		margin-top:10px;
@@ -235,8 +236,6 @@
 	
 	
 	@media (min-width:750px){
-		main{
-		}
 		
 		.row{
 			border-right: 1px solid #999999;
