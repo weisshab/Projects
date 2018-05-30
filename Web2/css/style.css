@@ -2,56 +2,46 @@
 In dieses Stylesheet wird jede Veränderung geschrieben, 
 welche nicht automatisch beim Export der Rätseldatei generiert wird.
 */
-html{
-	width:220px;
+
+@font-face {
+    font-family: 'franklin_gothic_fs';
+    src: url('https://cdn.suedkurier.de/content/fonts/franklingothic-book-webfont.eot');
+    src: url('https://cdn.suedkurier.de/content/fonts/franklingothic-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.suedkurier.de/content/fonts/franklingothic-book-webfont.woff2') format('woff2'),
+         url('https://cdn.suedkurier.de/content/fonts/franklingothic-book-webfont.woff') format('woff'),
+         url('https://cdn.suedkurier.de/content/fonts/franklingothic-book-webfont.ttf') format('truetype'),
+         url('https://cdn.suedkurier.de/content/fonts/franklingothic-book-webfont.svg#franklin_gothic_fsbook') format('svg');
+    font-weight: 300!important;
+    font-style: normal!important;
 }
 
-body{
-	width:92%;
-}
 
 #CrosswordCompilerPuz div > p  span{
 	line-height:0.5!important;
 }
 
-.Clues {
+#CrosswordCompilerPuz style ~ div:nth-child(43){
+	left:-82px;
+	font-size: 10px!important;
+}
+
+.ClueCell .Selected {
+    color: #006ab2!important;
+}
+
+
+/*Button*/
+.CCPuzButtons .ActionButton{
 	position:absolute;
-	top:265px;
-	border:1px solid sliver;
-	width:100%!important;
-	margin-left:0!important;
+	left:-2px;
 	z-index:1;
-}
-
-.Clues center ~ div:last-child{
-	height:30px!important;
-	border-top:1px solid silver!important;
-	padding-top:5px!important;
-}
-
-.Clues div {
-	background-color:#f7f7f7;
-	width:183px!important;
-	padding-bottom:15px!important;
-}
-
-.ClueList{
-	height: auto!important;
-}
-
-.CompleteMsg{
-	position:absloute;
-	left:-110px!important;
-	width: 150px!important;
-}
-
-.ActionButton {
-    color:#FFF!important;
+	color:#FFF!important;
     background-color: #006AB2!important;
     height: 48px;
     padding: 15px 32px;
     font-weight: 500;
     font-size: 16px;
+    font-family:inherit;
     cursor: pointer;
     border: none!important;
     border-radius: 2px!important;
@@ -61,19 +51,39 @@ body{
     user-select: none;
     -webkit-touch-callout: none;
     text-align: center;
-    min-width: 165px!important;
+    min-width: 265px!important;
     text-decoration: none;
     line-height: 0;
 }
 
-#CrosswordCompilerPuz{
-	width:100%!important;
-	height:480px!important;
+.GridSquare > p > span{
+	font-family:franklin_gothic_fs !important;
+	color:#4b4b4d!important;
 }
 
-#CrosswordCompilerPuz style ~ div:nth-child(43){
-	top:470px!important;
-	left:5px;
-	font-size: 10px!important;
+.GridSquare > p ~ div:last-child{
+	font-family:franklin_gothic_fs !important;
+	top:-5px!important;
+	color: #ff5335!important;
+}
+
+
+.CompleteMsg{
+	display:none;
+}
+
+.Clues{
+	position: relative;
+	top: 455px;
+	width:100%;
+}
+
+hr{
+	margin-top:25px;
+}
+
+.CopyTag{
+	position:relative;
+	bottom: 30px;
 }
 
