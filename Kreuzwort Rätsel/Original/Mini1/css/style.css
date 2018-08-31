@@ -15,6 +15,13 @@ welche nicht automatisch beim Export der Rätseldatei generiert wird.
     font-style: normal!important;
 }
 
+#CrosswordCompilerPuz{
+	width:245px !important;
+}
+
+#CrosswordCompilerPuz > div:first-of-type{
+	width:270px!important;
+}
 
 #CrosswordCompilerPuz div > p  span{
 	line-height:0.5!important;
@@ -31,6 +38,10 @@ welche nicht automatisch beim Export der Rätseldatei generiert wird.
 
 
 /*Button*/
+.CCPuzButtons{
+	width:215px!important
+}
+
 .CCPuzButtons .ActionButton{
 	position:absolute;
 	left:-2px;
@@ -51,7 +62,7 @@ welche nicht automatisch beim Export der Rätseldatei generiert wird.
     user-select: none;
     -webkit-touch-callout: none;
     text-align: center;
-    min-width: 265px!important;
+    width: 100% !important;
     text-decoration: none;
     line-height: 0;
 }
@@ -67,36 +78,29 @@ welche nicht automatisch beim Export der Rätseldatei generiert wird.
 	color: #ff5335!important;
 }
 
-
-.CompleteMsg{
-	display:none;
-}
-
 .Clues{
 	position: relative;
-	top: 455px;
-	width:100%;
+	top: 425px;
+	left: 24px;	
 }
 
 hr{
-	margin-top:25px;
+	display:none;
 }
 
 .CopyTag{
-	position:relative;
-	bottom: 30px;
+	display:none;
 }
 
 .ClueList{
 	border: 1px solid #dbdbdb!important;
 }
-/*
-@media (min-width:497px){
-	.Clues{
-		position: relative;
-		top: 0;
-		width: auto;
-	}
+
+.Clues > div:last-child{
+	margin-top:10px!important;
 }
-*/
+#CurrentClueHint{
+	display:none!important;
+}
+
 

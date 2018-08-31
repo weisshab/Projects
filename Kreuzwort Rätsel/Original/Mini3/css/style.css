@@ -1,0 +1,106 @@
+/* 
+In dieses Stylesheet wird jede Veränderung geschrieben, 
+welche nicht automatisch beim Export der Rätseldatei generiert wird.
+*/
+
+@font-face {
+    font-family: 'franklin_gothic_fs';
+    src: url('https://cdn.suedkurier.de/content/fonts/franklingothic-book-webfont.eot');
+    src: url('https://cdn.suedkurier.de/content/fonts/franklingothic-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.suedkurier.de/content/fonts/franklingothic-book-webfont.woff2') format('woff2'),
+         url('https://cdn.suedkurier.de/content/fonts/franklingothic-book-webfont.woff') format('woff'),
+         url('https://cdn.suedkurier.de/content/fonts/franklingothic-book-webfont.ttf') format('truetype'),
+         url('https://cdn.suedkurier.de/content/fonts/franklingothic-book-webfont.svg#franklin_gothic_fsbook') format('svg');
+    font-weight: 300!important;
+    font-style: normal!important;
+}
+
+#CrosswordCompilerPuz{
+	width:245px !important;
+}
+
+#CrosswordCompilerPuz > div:first-of-type{
+	width:270px!important;
+}
+
+#CrosswordCompilerPuz div > p  span{
+	line-height:0.5!important;
+}
+
+#CrosswordCompilerPuz style ~ div:nth-child(43){
+	left:-82px;
+	font-size: 10px!important;
+}
+
+.ClueCell .Selected {
+    color: #006ab2!important;
+}
+
+
+/*Button*/
+.CCPuzButtons{
+	width:215px!important
+}
+
+.CCPuzButtons .ActionButton{
+	position:absolute;
+	left:-2px;
+	z-index:1;
+	color:#FFF!important;
+    background-color: #006AB2!important;
+    height: 48px;
+    padding: 15px 32px;
+    font-weight: 500;
+    font-size: 16px;
+    font-family:inherit;
+    cursor: pointer;
+    border: none!important;
+    border-radius: 2px!important;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    text-align: center;
+    width: 100% !important;
+    text-decoration: none;
+    line-height: 0;
+}
+
+.GridSquare > p > span{
+	font-family:franklin_gothic_fs !important;
+	color:#4b4b4d!important;
+}
+
+.GridSquare > p ~ div:last-child{
+	font-family:franklin_gothic_fs !important;
+	top:-5px!important;
+	color: #ff5335!important;
+}
+
+.Clues{
+	position: relative;
+	top: 425px;
+	left: 24px;	
+}
+
+hr{
+	display:none;
+}
+
+.CopyTag{
+	display:none;
+}
+
+.ClueList{
+	border: 1px solid #dbdbdb!important;
+}
+
+.Clues > div:last-child{
+	margin-top:10px!important;
+}
+#CurrentClueHint{
+	display:none!important;
+}
+
+
